@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>WebApp</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          class="img-logo"
+          src="assets/icons/logo.svg"
+          alt="logo da empresa"
+        />
+        <h2>Controle financeiro</h2>
+        <ul class="menus">
+          <li>Cadastro de transações</li>
+          <li>Limpar Dados</li>
+        </ul>
+        <img class="img-menu" src="assets/icons/menu.svg" alt="icone do menu" />
+      </nav>
+    </header>
+
+    <main>
+      <section class="section section-left">
+        <div>
+          <form>
+            <h2 class="title-form">Nova transação</h2>
+            <div class="form form-buy">
+              <label for="type">Tipo de transação</label>
+              <select name="type" id="type">
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+              </select>
+            </div>
+
+            <div class="form form-buy-name">
+              <label>Nome da mercadoria</label>
+              <input type="text" placeholder="Mercadoria" />
+            </div>
+
+            <div class="form form-buy-price">
+              <label>Valor</label>
+              <input type="text" placeholder="R$ 0,00" />
+            </div>
+            <button>Adicionar transação</button>
+          </form>
+        </div>
+        <hr />
+      </section>
+
+      <section class="section section-right">
+        <div class="section-transactions">
+          <h2>Extrato de transação</h2>
+          <table border="1">
+            <thead class="text-standard-bold">
+              <tr>
+                <th>Mercadoria</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody class="text-standard">
+              <tr>
+                <td class="positive">Lorem ipsum dolor sit amet consectetur</td>
+                <td>R$12.999,99</td>
+              </tr>
+              <tr>
+                <td class="negative">Quis nostrud exercitation</td>
+                <td>R$99,99</td>
+              </tr>
+              <tr>
+                <td class="positive">Lorem ipsum</td>
+                <td>R$9,99</td>
+              </tr>
+              <tr class="tr-total">
+                <td class="space">Total</td>
+                <td class="profit">R$12.909,99</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
