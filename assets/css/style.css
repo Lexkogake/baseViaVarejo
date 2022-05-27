@@ -6,6 +6,7 @@
   font-family: Lato, sans-serif;
   outline: none;
 }
+
 header {
   background-color: #e0e0e0;
 }
@@ -94,8 +95,7 @@ hr {
 
 .section-transactions h2 {
   text-align: center;
-  font-size: 1.12rem;
-  font-weight: bold;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
@@ -104,64 +104,50 @@ table {
   width: 100%;
 }
 
-thead tr th {
-  border-top: hidden;
-  border-left: hidden;
-  border-right: hidden;
-}
-
-thead tr th:first-child {
-  text-align: left;
-  padding-left: 31px;
-}
-
-tbody tr td {
-  border-left: hidden;
-  border-right: hidden;
+th,
+td {
   border-bottom: 1px solid #979797;
-
-  padding: 11px;
 }
 
-tbody tr td:nth-child(2) {
-  text-align: end;
+tr td:first-child {
+  padding: 0 11px 0 10px;
 }
 
-tbody tr:last-child {
-  border-bottom: hidden;
+thead th:nth-child(2) {
+  text-align: left;
+  padding-bottom: 5px;
 }
 
+.text-standard,
 .text-standard-bold {
   font-size: 14px;
 }
 
-.text-standard {
-  font-size: 14px;
+tbody tr td {
+  padding: 11px 10px 11px 0;
 }
 
-.positive::before {
-  content: '+';
-  margin-right: 11px;
+tbody tr td:nth-child(3) {
+  text-align: end;
 }
 
-.negative::before {
-  content: '-';
-  margin-right: 11px;
+tbody tr:nth-child(4) {
+  border-bottom: hidden;
+  border-top: 3px double #979797;
+  vertical-align: top;
+}
+
+.positive {
+  width: 65%;
 }
 
 .tr-total {
   font-weight: bold;
 }
 
-.space::before {
-  content: ' ';
-  margin-right: 21px;
-}
-
-.profit::after {
-  content: '[LUCRO]';
-  display: inline-block;
-  font-size: 0.62rem;
+.profit span {
+  font-size: 10px;
+  font-weight: 400;
 }
 
 @media (min-width: 768px) {
@@ -176,10 +162,10 @@ tbody tr:last-child {
   }
 
   .title-form {
-    font-size: 1.12rem;
-    margin-top: 20px;
+    display: inline-block;
+    font-size: 18px;
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -192,7 +178,7 @@ tbody tr:last-child {
     width: 348px;
   }
 
-  button {
+  .button {
     width: 200px;
     height: 33px;
     margin: 20px;
@@ -209,14 +195,6 @@ tbody tr:last-child {
 
   .profit {
     position: relative;
-  }
-
-  .profit::after {
-    content: '[LUCRO]';
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-    font-size: 0.62rem;
   }
 }
 
