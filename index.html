@@ -31,7 +31,8 @@
     </header>
 
     <main>
-      <section class="section section-left">
+      <!-- section-left -->
+      <section class="section">
         <div>
           <form>
             <h2 class="title-form">Nova transação</h2>
@@ -52,7 +53,7 @@
               <label>Valor</label>
               <input type="text" placeholder="R$ 0,00" />
             </div>
-            <button>Adicionar transação</button>
+            <input class="button" type="submit" value="Adicionar transação" />
           </form>
         </div>
         <hr />
@@ -64,20 +65,24 @@
           <table border="1">
             <thead class="text-standard-bold">
               <tr>
+                <th></th>
                 <th>Mercadoria</th>
                 <th>Valor</th>
               </tr>
             </thead>
             <tbody class="text-standard">
               <tr>
+                <td>+</td>
                 <td class="positive">Lorem ipsum dolor sit amet consectetur</td>
                 <td>R$12.999,99</td>
               </tr>
               <tr>
+                <td>-</td>
                 <td class="negative">Quis nostrud exercitation</td>
                 <td>R$99,99</td>
               </tr>
               <tr>
+                <td>+</td>
                 <td class="positive">Lorem ipsum</td>
                 <td>R$9,99</td>
               </tr>
