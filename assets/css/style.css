@@ -14,7 +14,6 @@ header {
 nav {
   display: flex;
   align-items: center;
-
   height: 60px;
 }
 
@@ -32,6 +31,44 @@ nav h2 {
 
 .menus {
   display: none;
+}
+
+.menu-mobile {
+  /* display: block; */
+  position: absolute;
+  width: 85%;
+  height: 100vh;
+  background-color: #333;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.menu-mobile li {
+  text-align: end;
+  padding: 5px 20px;
+  font-size: 16px;
+}
+
+.menu-mobile li:first-child {
+  margin: 20px 0 26px;
+  list-style: none;
+}
+
+.menu-mobile .close {
+  display: flex;
+  cursor: pointer;
+}
+
+.menu-mobile li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-mobile li:hover:not(:first-child) {
+  cursor: pointer;
+  background-color: #c4c4c4;
+  color: #333;
 }
 
 .img-menu {
@@ -160,6 +197,10 @@ tbody tr:nth-child(4) {
 }
 
 @media (min-width: 768px) {
+  .menu-mobile {
+    /* display: block; */
+    width: 33%;
+  }
   form {
     height: 189px;
     display: flex;
@@ -227,9 +268,20 @@ tbody tr:nth-child(4) {
     margin-left: 20px;
   }
 
+  .menu-mobile {
+    position: initial;
+    width: initial;
+    height: initial;
+  }
+
+  .menu-mobile li {
+    padding: initial;
+  }
+
   nav .menus {
     display: flex;
-    width: 60%;
+    justify-content: flex-end;
+    min-width: 342px;
     margin: 0 20px;
     background-color: #fff;
   }
@@ -238,16 +290,23 @@ tbody tr:nth-child(4) {
     margin: 10px 20px 10px 0;
   }
 
+  .menus li a {
+    color: #333;
+  }
+
   .menus li:first-child {
+    display: none;
+  }
+
+  .menus li:nth-child(2) {
     margin-left: 20px;
   }
 
-  .menus li:first-child::after {
+  .menus li:nth-child(2)::after {
     content: '';
     border-right: 1px solid red;
     margin-left: 20px;
   }
-
   .img-menu {
     display: none;
   }
