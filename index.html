@@ -34,7 +34,7 @@
     <main>
       <section class="section section-left">
         <div>
-          <form>
+          <form id="formMercadoria">
             <h2 class="title-form">Nova transação</h2>
             <div class="form form-buy">
               <label for="type">Tipo de transação</label>
@@ -45,13 +45,25 @@
             </div>
 
             <div class="form form-buy-name">
-              <label>Nome da mercadoria</label>
-              <input type="text" placeholder="Mercadoria" />
+              <label for="nomeMercadoria">Nome da mercadoria</label>
+              <input
+                id="nomeMercadoria"
+                type="text"
+                placeholder="Mercadoria"
+                minlength="3"
+                required
+              />
             </div>
 
             <div class="form form-buy-price">
-              <label>Valor</label>
-              <input type="text" placeholder="R$ 0,00" />
+              <label for="valor">Valor</label>
+              <input
+                id="valor"
+                type="text"
+                placeholder="R$ 0,00"
+                required
+                min="0.01"
+              />
             </div>
             <input class="button" type="submit" value="Adicionar transação" />
           </form>
@@ -97,5 +109,6 @@
         </div>
       </section>
     </main>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
