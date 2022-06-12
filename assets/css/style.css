@@ -34,7 +34,6 @@ nav h2 {
 }
 
 .menu-mobile {
-  /* display: block; */
   position: absolute;
   width: 85%;
   height: 100vh;
@@ -44,10 +43,15 @@ nav h2 {
   z-index: 5;
 }
 
+.ativo {
+  display: block;
+}
+
 .menu-mobile li {
   text-align: end;
   padding: 5px 20px;
   font-size: 16px;
+  transition: all 300ms;
 }
 
 .menu-mobile li:first-child {
@@ -116,8 +120,12 @@ nav h2 {
   font-weight: 400;
   border-radius: 4px;
   border: none;
+  transition: all 300ms;
+}
 
+.button:hover {
   cursor: pointer;
+  filter: brightness(1.5);
 }
 
 hr {
@@ -146,12 +154,9 @@ td {
   border-bottom: 1px solid #979797;
 }
 
-tr td:first-child {
-  padding: 0 11px 0 10px;
-}
-
-thead th:nth-child(2) {
+.th_mercadoria {
   text-align: left;
+  padding-left: 22px;
   padding-bottom: 5px;
 }
 
@@ -161,19 +166,24 @@ thead th:nth-child(2) {
 }
 
 tbody tr td {
-  padding: 11px 10px 11px 0;
+  padding: 11px 10px 11px 10px;
+}
+tfoot tr td {
+  padding: 11px 10px 11px 22px;
 }
 
-tbody tr td:nth-child(1) {
-  text-align: center;
+tbody tr td:first-child,
+tfoot tr td:first-child {
+  display: none;
 }
 
-tbody tr td:nth-child(3) {
+tbody tr td:nth-child(3),
+tfoot tr td:nth-child(3) {
   width: 30%;
   text-align: end;
 }
 
-tbody tr:nth-child(4) {
+tfoot tr:nth-child(1) {
   border-bottom: hidden;
   border-top: 3px double #979797;
   vertical-align: top;
@@ -183,17 +193,31 @@ tbody tr:nth-child(4) {
   width: 65%;
 }
 
+.positive span {
+  padding-left: 8px;
+}
+
 .tr-total {
   width: 100%;
   font-weight: bold;
+}
+
+.noConteudo {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.profit {
+  position: relative;
 }
 
 .profit span {
   font-size: 10px;
   font-weight: 400;
   position: absolute;
-  right: 30px;
-  bottom: 120px;
+  right: 10px;
+  bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -248,7 +272,8 @@ tbody tr:nth-child(4) {
     padding-right: 20px;
   }
 
-  tbody tr td {
+  tbody tr td,
+  tfoot tr td {
     padding-right: 20px;
   }
 
@@ -286,12 +311,21 @@ tbody tr:nth-child(4) {
     background-color: #fff;
   }
 
+  nav .menus.menu-mobile li:hover {
+    background-color: inherit;
+  }
+
   .menus li {
     margin: 10px 20px 10px 0;
   }
 
   .menus li a {
     color: #333;
+    transition: all 300ms;
+  }
+
+  .menus li a:hover {
+    color: red;
   }
 
   .menus li:first-child {
