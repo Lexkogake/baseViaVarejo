@@ -24,8 +24,12 @@
         <h2>Controle financeiro</h2>
         <ul class="menus menu-mobile">
           <li><img class="close" src="assets/icons/close.svg" /></li>
-          <li><a href="#">Cadastro de transações</a></li>
-          <li><a href="#">Limpar Dados</a></li>
+          <li>
+            <a class="cadastro_transacao" href="#">Cadastro de transações</a>
+          </li>
+          <li>
+            <a class="limpa_dados" href="#">Limpar Dados</a>
+          </li>
         </ul>
         <img class="img-menu" src="assets/icons/menu.svg" alt="icone do menu" />
       </nav>
@@ -77,14 +81,13 @@
           <table>
             <thead class="thead text-standard-bold">
               <tr>
-                <th></th>
-                <th>Mercadoria</th>
-                <th>Valor</th>
+                <th class="th_mercadoria">Mercadoria</th>
+                <th class="th_valor">Valor</th>
               </tr>
             </thead>
 
-            <tbody class="text-standard">
-              <tr>
+            <tbody class="listaLinha text-standard">
+              <!-- <tr>
                 <td>+</td>
                 <td class="positive">Lorem ipsum dolor sit amet consectetur</td>
                 <td>R$12.999,99</td>
@@ -103,8 +106,9 @@
                 <td></td>
                 <td class="space">Total</td>
                 <td class="profit">R$12.909,99 <span>[LUCRO]</span></td>
-              </tr>
+              </tr> -->
             </tbody>
+            <tfoot class="footer text-standard"></tfoot>
           </table>
         </div>
       </section>
