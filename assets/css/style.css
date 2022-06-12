@@ -34,7 +34,6 @@ nav h2 {
 }
 
 .menu-mobile {
-  /* display: block; */
   position: absolute;
   width: 85%;
   height: 100vh;
@@ -42,6 +41,10 @@ nav h2 {
   top: 0;
   right: 0;
   z-index: 5;
+}
+
+.ativo {
+  display: block;
 }
 
 .menu-mobile li {
@@ -151,18 +154,6 @@ td {
   border-bottom: 1px solid #979797;
 }
 
-/* tr td:first-child {
-  padding: 0 11px 0 10px;
-  width: 5px;
-  text-align: left;
-} */
-
-/* com 3 colunas */
-/* thead th:nth-child(2) {
-  text-align: left;
-  padding-bottom: 5px;
-} */
-
 .th_mercadoria {
   text-align: left;
   padding-left: 22px;
@@ -186,7 +177,6 @@ tfoot tr td:first-child {
   display: none;
 }
 
-/* 3colunas */
 tbody tr td:nth-child(3),
 tfoot tr td:nth-child(3) {
   width: 30%;

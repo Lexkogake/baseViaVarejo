@@ -1,6 +1,7 @@
 let limpaDados = document.querySelector('.limpa_dados');
 let formMercadoria = document.querySelector('#formMercadoria');
-let close = document.querySelector('.menu-mobile');
+let menuMobile = document.querySelector('.menu-mobile');
+let btnMenu = document.querySelector('.img-menu');
 let items = JSON.parse(localStorage.getItem('items')) || [];
 
 function criaLista() {
@@ -109,8 +110,12 @@ limpaDados.addEventListener('click', () => {
   }
 });
 
-close.addEventListener('click', () => {
-  console.log('clicado');
+btnMenu.addEventListener('click', () => {
+  menuMobile.classList.add('ativo');
+});
+
+menuMobile.addEventListener('click', () => {
+  menuMobile.classList.remove('ativo');
 });
 
 criaLista();
